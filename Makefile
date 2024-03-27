@@ -6,7 +6,7 @@ EXEC=rust-exec
 default: build_release
 
 build_release:
-	@cargo build --target thumbv7em-none-eabihf
+	@cargo +nightly bootimage --target targets/btf_os_target.json
 
 dist: build_release
 	@echo "dist: build_release"
